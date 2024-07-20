@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #87CEEB; /* Màu trời */
+}
+
+.aquarium {
+    width: 600px;
+    height: 400px;
+    border: 2px solid #000;
+    background-image: url('images/background1.jpg'); /* Đặt ảnh nền mặc định */
+    background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ khu vực */
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fish {
+    position: absolute;
+    width: 90px;
+    height: 60px;
+    border-radius: 50%;
+    animation: swim 5s infinite;
+    transition: transform 0.5s; /* Hiệu ứng chuyển động mượt mà */
+}
+
+#fish1 {
+    background-image: url('images/fish1.png');
+    background-size: cover;
+    top: 50px;
+    left: 0;
+    animation-delay: 0s;
+}
+
+#fish2 {
+    background-image: url('images/fish2.png');
+    background-size: cover;
+    top: 100px;
+    left: -50px;
+    animation-delay: 1s;
+}
+
+#fish3 {
+    background-image: url('images/fish3.png');
+    background-size: cover;
+    top: 150px;
+    left: -100px;
+    animation-delay: 2s;
+}
+
+#fish4 {
+    background-image: url('images/fish4.png');
+    background-size: cover;
+    top: 200px;
+    left: -150px;
+    animation-delay: 3s;
+}
+
+#fish5 {
+    background-image: url('images/fish5.png');
+    background-size: cover;
+    top: 250px;
+    left: -200px;
+    animation-delay: 4s;
+}
+
+@keyframes swim {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(550px); }
+    100% { transform: translateX(0); }
+}
+
+.decorations .plant {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    height: 120px;
+}
+
+#plant1 {
+    background-image: url('images/plant1.png');
+    background-size: cover;
+    left: 50px;
+}
+
+#plant2 {
+    background-image: url('images/plant2.png');
+    background-size: cover;
+    left: 500px;
+}
+
+.decorations .rock {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 60px;
+}
+
+#rock1 {
+    background-image: url('images/rock-removebg-preview.png');
+    background-size: cover;
+    left: 200px;
+}
+
+#rock2 {
+    background-image: url('images/rock-removebg-preview.png');
+    background-size: cover;
+    left: 350px;
+}
+button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 100;
+}
+
+#changeBackground {
+    left: 150px; /* Đặt khoảng cách phù hợp để nút không chồng lên nhau */
+}
+/* Hiệu ứng hover */
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng active */
+.btn:active {
+    background-color: #3e8e41;
+    transform: scale(1);
+}
